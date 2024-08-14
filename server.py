@@ -28,11 +28,10 @@ def sent_detector():
         return "Invalid text! Please try again."
 
     return (
-        f"The analysis of your statement yields the following emotions: "
-        f"anger: {response['anger']:.4f}, disgust: {response['disgust']:.4f}, "
-        f"fear: {response['fear']:.4f}, joy: {response['joy']:.4f}, and "
-        f"sadness: {response['sadness']:.4f}. "
-        f"The dominant emotion detected is {response['dominant_emotion']}."
+        f"For the given statement, the system response is 'anger': {formated_response['anger']} "
+        f"'disgust': {formated_response['disgust']}, 'fear': {formated_response['fear']}, "
+        f"'joy': {formated_response['joy']} and 'sadness': {formated_response['sadness']}. "
+        f"The dominant emotion is {formated_response['dominant_emotion']}."
     )
 
 @app.route("/")
